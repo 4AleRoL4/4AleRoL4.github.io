@@ -1,6 +1,6 @@
-name: YFDkldmm
+name: （要饭的）可怜大猫猫
 # avatar: images/profile.png # Avatar image. Default to "images/profile.webp".
-bio: 'Gopher, PHPer, Full Stack Engineer.'
+bio: '学得很杂的一个blog'
 company: Company # HTML markup are supported, such as: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>.
 location: Earth # HTML markup are supported, such as: <a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>.
 # about: https://razonyang.com # The external about page. The internal about page will be used if not set.
@@ -11,7 +11,7 @@ params: {
 social:
   email: alexrl@qq.com
   github: https://github.com/4AleRoL4
-  twitter: 
+  bilibili: https://space.bilibili.com/254581365
   patreon: 
-  paypal: 
-  rss: "" # Remove RSS
+  qq: 1729027245
+  rss: ''

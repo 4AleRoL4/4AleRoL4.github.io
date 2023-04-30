@@ -15,9 +15,9 @@ keywords: Hugo, Bootstrap, Blog Theme
 
 # logo: images/logo.png # Logo image. Default to images/logo.webp.
 # logo: false # Disable Logo
-brand: HBS
+brand: （要饭的）可怜大猫猫
 
-palette: purple # Default palette. Optional. You'll need to clear the browser cache after modifying this.
+palette: cyan # Default palette. Optional. You'll need to clear the browser cache after modifying this.
 # Available palettes. Default to ALL. Empty array means disable.
 # palettes:
 #  - blue
@@ -144,7 +144,7 @@ creativeCommons:
   # sa: true # Adaptations must be shared under the same terms.
 
 # utterances:
-  # repo: razonyang/hugo-theme-bootstrap-skeleton # Replace with your repository.
+  repo: 4AleRoL4/4AleRoL4.github.io # Replace with your repository.
   #issueTerm: pathname # pathname, url, title, og:title
   # label: comment
   # By default, light and dark mode correspond to github-light and github-dark, respectively.
@@ -170,8 +170,8 @@ creativeCommons:
 
 # See https://giscus.app
 giscus:
-  repo: "razonyang/hugo-theme-bootstrap-skeleton" # required.
-  repoId: "R_kgDOHJi95g" # required.
+  repo: "4AleRoL4/4AleRoL4.github.io" # required.
+  repoId: "632751865" # required.
   category: "General" # required.
   categoryId: "DIC_kwDOHJi95s4CTy6q" # required.
   # theme: "dark" # Default to auto.
@@ -204,7 +204,7 @@ search:
   # debug: true
 
 reward:
-  alipay: images/reward/alipay.png
+  alipay: images/reward/alipay.jpg
   wechat: images/reward/wechat.png
   #paypal: images/reward/paypal.png
   #patreon: images/reward/patreon.png
@@ -248,7 +248,7 @@ contact:
     # siteKey: ""
 
 repo:
-  url: https://github.com/razonyang/hugo-theme-bootstrap-skeleton
+  url: https://github.com/4AleRoL4/4AleRoL4.github.io
   branch: main
   # subPath: exampleSite
   # dateFormat: 02/01/2006, 15:04:05 PM
@@ -256,9 +256,9 @@ repo:
 topAppBar:
   # See https://hbs.razonyang.com/v1/en/docs/widgets/social-links/.
   social:
-    github: razonyang/hugo-theme-bootstrap
-    patreon: razonyang
-    paypal: razonyang
+    github: 4AleRoL4
+    bilibili: https://space.bilibili.com/254581365
+    rss: ""
 
 #docs:
   # nav:
