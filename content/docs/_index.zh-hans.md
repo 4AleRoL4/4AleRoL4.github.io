@@ -1,5 +1,5 @@
 ---
-title: 示例文档
+title: 小说
 menu:
   main:
     weight: 1
@@ -7,4 +7,4 @@ menu:
       icon: '<i class="fas fa-fw fa-file"></i>'
 ---
 
-The example of Docs layout.
+这里是本人放小说的地方，具体请看前言

@@ -1,6 +1,6 @@
 main:
-  - name: 文档
+  - name: MidiShow
     identifier: documentations
-    url: https://yfd.kldmm.icu/
+    url: https://www.midishow.com/u/%E8%A6%81%E9%A5%AD%5C%E5%8F%AF%E6%80%9C%E5%A4%A7%E7%8C%AB%E7%8C%AB
     params:
       icon: '<i class="fas fa-fw fa-book"></i>'

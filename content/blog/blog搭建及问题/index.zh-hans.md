@@ -25,6 +25,8 @@ images: [/images/blog搭建及问题/index.jpg]
 
 我使用的是[Hugo](https://gohugo.io/)框架来搭建blog，需要安装Go语言以及Git。
 
+<!--more-->
+
 ## 安装步骤
 
 1. 首先Hugo有自带的安装步骤，按照那上面一步一步来。
