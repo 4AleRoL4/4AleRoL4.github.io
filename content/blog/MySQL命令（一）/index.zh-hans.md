@@ -21,7 +21,7 @@ images: []
 authors: yfdkldmm
 ---
 
-记录一下MySQL的命令
+包含基础命令，select一部分命令
 
 <!--more-->
 
