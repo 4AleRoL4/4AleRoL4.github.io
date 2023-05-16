@@ -1,0 +1,473 @@
+[debug] [2023-05-16T07:04:05.574Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:04:05.576Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login
+[debug] [2023-05-16T07:04:05.577Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:04:05.577Z] Platform:      win32
+[debug] [2023-05-16T07:04:05.578Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:04:05.578Z] Time:          Tue May 16 2023 15:04:05 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:04:05.579Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=401077538&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-16T07:04:17.114Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-05-16T07:04:17.125Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-05-16T07:04:38.231Z] Token Fetch Error: FirebaseError: Failed to make request to https://accounts.google.com/o/oauth2/token
+    at RetryOperation._fn (D:\nodejs\node_global\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[debug] [2023-05-16T07:04:38.237Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:04:38.238Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"4fc744ef-1466-467a-889c-35766eaf79d0"}
+[debug] [2023-05-16T07:04:48.451Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:06:43.380Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:06:43.383Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:06:43.383Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:06:43.383Z] Platform:      win32
+[debug] [2023-05-16T07:06:43.383Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:06:43.384Z] Time:          Tue May 16 2023 15:06:43 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:06:43.385Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:06:45.507Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:06:45.508Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"a459b130-48b8-4d20-828b-564b9894d771"}
+[debug] [2023-05-16T07:06:55.860Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:07:55.505Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:07:55.507Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:07:55.507Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:07:55.508Z] Platform:      win32
+[debug] [2023-05-16T07:07:55.508Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:07:55.509Z] Time:          Tue May 16 2023 15:07:55 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:07:55.509Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:07:56.561Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:07:56.562Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"f6609e8e-d6c3-4446-b682-d187383e9557"}
+[debug] [2023-05-16T07:08:06.829Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:08:13.965Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:08:13.967Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login
+[debug] [2023-05-16T07:08:13.967Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:08:13.968Z] Platform:      win32
+[debug] [2023-05-16T07:08:13.968Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:08:13.969Z] Time:          Tue May 16 2023 15:08:13 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:08:13.969Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=158699870&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-16T07:08:47.539Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-05-16T07:08:47.540Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-05-16T07:09:08.662Z] Token Fetch Error: FirebaseError: Failed to make request to https://accounts.google.com/o/oauth2/token
+    at RetryOperation._fn (D:\nodejs\node_global\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[debug] [2023-05-16T07:09:08.668Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:09:08.669Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"15cf5e76-8081-4f41-a516-81afa0928a34"}
+[debug] [2023-05-16T07:09:19.504Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:10:05.962Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:10:05.965Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login
+[debug] [2023-05-16T07:10:05.965Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:10:05.965Z] Platform:      win32
+[debug] [2023-05-16T07:10:05.966Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:10:05.966Z] Time:          Tue May 16 2023 15:10:05 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:10:05.967Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=304113422&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-16T07:10:13.446Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-05-16T07:10:13.446Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-05-16T07:10:43.171Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:10:43.174Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:10:43.174Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:10:43.174Z] Platform:      win32
+[debug] [2023-05-16T07:10:43.175Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:10:43.175Z] Time:          Tue May 16 2023 15:10:43 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:10:43.176Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:10:44.989Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:10:44.989Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"942684f4-689f-4e64-87c5-6a98919377a9"}
+[debug] [2023-05-16T07:10:55.269Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:13:43.771Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:13:43.773Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:13:43.774Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:13:43.774Z] Platform:      win32
+[debug] [2023-05-16T07:13:43.774Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:13:43.775Z] Time:          Tue May 16 2023 15:13:43 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:13:43.775Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:13:51.791Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:13:51.791Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"f87a4ac5-6de2-4823-a3fb-0e47e2689f85"}
+[debug] [2023-05-16T07:14:03.347Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:14:12.732Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:14:12.734Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login
+[debug] [2023-05-16T07:14:12.735Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:14:12.735Z] Platform:      win32
+[debug] [2023-05-16T07:14:12.735Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:14:12.736Z] Time:          Tue May 16 2023 15:14:12 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:14:12.736Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=131651329&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-16T07:14:20.355Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-05-16T07:14:20.356Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-05-16T07:14:41.459Z] Token Fetch Error: FirebaseError: Failed to make request to https://accounts.google.com/o/oauth2/token
+    at RetryOperation._fn (D:\nodejs\node_global\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[debug] [2023-05-16T07:14:41.464Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:14:41.465Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"86a7d825-ae72-4a4d-b404-979cda2fc3f6"}
+[debug] [2023-05-16T07:14:52.320Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:16:29.387Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:16:29.388Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:16:29.389Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:16:29.389Z] Platform:      win32
+[debug] [2023-05-16T07:16:29.389Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:16:29.392Z] Time:          Tue May 16 2023 15:16:29 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:16:29.393Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:16:30.033Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:16:30.034Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"f57e3eb4-be88-42c8-8949-7246fe37cb1c"}
+[debug] [2023-05-16T07:16:40.354Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:26:20.866Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:26:20.868Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:26:20.869Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:26:20.870Z] Platform:      win32
+[debug] [2023-05-16T07:26:20.870Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:26:20.871Z] Time:          Tue May 16 2023 15:26:20 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:26:20.871Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:26:23.869Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:26:23.870Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"c57269a8-c2cb-4462-b92b-05c492c35c78"}
+[debug] [2023-05-16T07:26:34.186Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:33:31.382Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:33:31.384Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:33:31.385Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:33:31.385Z] Platform:      win32
+[debug] [2023-05-16T07:33:31.385Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:33:31.386Z] Time:          Tue May 16 2023 15:33:31 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:33:31.386Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:33:32.651Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:33:32.651Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"61879df9-01e4-4ed3-ad18-2bba8c294cf6"}
+[debug] [2023-05-16T07:33:43.003Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:38:11.516Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:38:11.518Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:38:11.519Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:38:11.519Z] Platform:      win32
+[debug] [2023-05-16T07:38:11.519Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:38:11.526Z] Time:          Tue May 16 2023 15:38:11 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:38:11.526Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:38:17.695Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:38:17.696Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"d7156334-5962-4df2-904c-7639b37527c6"}
+[debug] [2023-05-16T07:38:29.282Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:39:28.909Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:39:28.911Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:39:28.911Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:39:28.911Z] Platform:      win32
+[debug] [2023-05-16T07:39:28.912Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:39:28.913Z] Time:          Tue May 16 2023 15:39:28 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:39:28.913Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:39:30.841Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:39:30.841Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"c60c49c2-9d7f-4719-b01f-20449a8cca76"}
+[debug] [2023-05-16T07:39:41.059Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:43:27.619Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:43:27.621Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:43:27.621Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:43:27.621Z] Platform:      win32
+[debug] [2023-05-16T07:43:27.622Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:43:27.622Z] Time:          Tue May 16 2023 15:43:27 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:43:27.623Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:43:28.522Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:43:28.523Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"e0197790-6f4c-46c2-9851-7faee6c8f27d"}
+[debug] [2023-05-16T07:44:42.547Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: read ECONNRESET
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:45:22.891Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:45:22.893Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:45:22.893Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:45:22.894Z] Platform:      win32
+[debug] [2023-05-16T07:45:22.894Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:45:22.894Z] Time:          Tue May 16 2023 15:45:22 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:45:22.895Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:45:29.785Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:45:29.786Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"0e960d36-41f7-4c54-b9e1-3ab6d2e00b52"}
+[debug] [2023-05-16T07:45:40.172Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:47:26.255Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:47:26.257Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:47:26.258Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:47:26.258Z] Platform:      win32
+[debug] [2023-05-16T07:47:26.258Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:47:26.259Z] Time:          Tue May 16 2023 15:47:26 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:47:26.259Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:47:27.907Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:47:27.907Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"3468650c-95b1-4802-8fbb-cbf5288a101f"}
+[debug] [2023-05-16T07:47:38.231Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:50:34.846Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:50:34.848Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:50:34.848Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:50:34.848Z] Platform:      win32
+[debug] [2023-05-16T07:50:34.848Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:50:34.849Z] Time:          Tue May 16 2023 15:50:34 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:50:34.849Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:50:36.563Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:50:36.564Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"f69a9bc4-3dac-4b1f-abf4-89a13051c838"}
+[debug] [2023-05-16T07:50:46.849Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
+[debug] [2023-05-16T07:51:23.479Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T07:51:23.481Z] Command:       C:\Program Files\nodejs\node.exe D:\nodejs\node_global\node_modules\firebase-tools\lib\bin\firebase.js --debug login --no-localhost
+[debug] [2023-05-16T07:51:23.481Z] CLI Version:   12.0.0
+[debug] [2023-05-16T07:51:23.482Z] Platform:      win32
+[debug] [2023-05-16T07:51:23.482Z] Node Version:  v16.15.0
+[debug] [2023-05-16T07:51:23.483Z] Time:          Tue May 16 2023 15:51:23 GMT+0800 (中国标准时间)
+[debug] [2023-05-16T07:51:23.484Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2023-05-16T07:51:24.077Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-05-16T07:51:24.078Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"03f92326-c6d4-4b63-abee-cc8da00b180d"}
+[debug] [2023-05-16T07:51:34.387Z] FetchError: request to https://auth.firebase.tools/attest failed, reason: Client network socket disconnected before secure TLS connection was established
+    at ClientRequest.<anonymous> (D:\nodejs\node_global\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:454:9)
+    at TLSSocket.emit (node:events:527:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://auth.firebase.tools/attest
