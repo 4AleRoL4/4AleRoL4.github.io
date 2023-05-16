@@ -3,7 +3,7 @@
 title: MySQL命令（二）
 date: 2023-05-08T12:53:36+08:00
 featured: false
-draft: true
+draft: false
 comment: true
 toc: true
 reward: true
@@ -283,3 +283,89 @@ select date_format(now(), '%y年%m月%d');
 ```
 
 #### 其他函数
+
+比较少，也没什么可讲的，就单纯给出来好了。
+
+```mysql
+select version();
+select database();
+select user();
+```
+
+#### 流程控制函数
+
+##### if
+
+MySQL的if函数是包含了if和else的效果。
+
+```mysql
+select if(10>5,'大','小');
+select if(5<10,'小','大');
+```
+
+结果分别为大，小。
+
+##### case
+
+第一个用法就相当于java中的switch case。
+
+```mysql
+select b
+case c
+when 1 then b*1
+when 2 then b*2
+when 3 then b*3
+else b*4
+end
+from a;
+```
+
+含义为，从a表中查询b列，当c列满足等于1的条件时，值为b\*1，满足等于2的条件时，值为b\*2，以此类推。都不满足的情况，值为b*4。
+
+第二个用法也就是类似Python中的elif。
+
+```mysql
+select b
+case c
+when c>1 then b*1
+when c>2 then b*2
+else b*3
+end
+from a;
+```
+
+因为when的后面可以识别条件判断，所以能起到多重if的作用，也就是Python的elif。
+
+### 分组函数
+
+有sum（求和），avg（求平均值），max（最大值），min（最小值），count（求总个数）五个函数。
+用法只需传递一整个列。
+
+```mysql
+select sum(b)
+from a;
+```
+
+五个用法一致。
+其次，sum和avg只能用于数字计算，而另外三个则可以对任何类型字符使用。
+
+此外，都可以与distinct搭配使用，达到去重统计。
+
+```mysql
+select sum(distinct b)
+from a;
+```
+
+#### count
+
+count除了统计单列总行数，也可以通过
+
+```mysql
+select count(*), count(1)
+from a;
+```
+
+来统计表内总行数，因为单列可能会有null，判断为null则不统计。
+其中，count(*)，count(1)在不同引擎下有不同的效率，myisan下，count(\*)比count(1)快，而另一个innodb引擎，效率相差不大。
+
+最后，分组函数不能与普通查询共用，会限制显示数据的具体数量，除非使用group by后的查询字段。
