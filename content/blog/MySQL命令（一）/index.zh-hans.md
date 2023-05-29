@@ -12,7 +12,7 @@ carousel: false
 series:
  - blog
 categories: [
-    笔记
+    教程
 ]
 tags: [
     MySQL
@@ -27,7 +27,13 @@ authors: yfdkldmm
 
 首先是数据库内容，之后的命令里面都会用这个数据库来作为示例。
 
-[employees](/documents/MySQL命令（一）/myemployees.sql)
+[点我下载绝密数据库~](/documents/MySQL命令（一）/myemployees.sql)
+
+把上面的数据库下载，然后放到自己可视化什么什么的里面以后，打开看看表结构，如下
+
+![数据库结构](/images/MySQL命令（一）/数据库结构.jpg)
+
+至于内容数据什么的，就自己打开来看看。
 
 ## MySQL最基础的命令
 
