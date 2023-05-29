@@ -25,6 +25,10 @@ authors: yfdkldmm
 
 <!--more-->
 
+首先是数据库内容，之后的命令里面都会用这个数据库来作为示例。
+
+[employees](/documents/MySQL命令（一）/myemployees.sql)
+
 ## MySQL最基础的命令
 
 ### show databases
