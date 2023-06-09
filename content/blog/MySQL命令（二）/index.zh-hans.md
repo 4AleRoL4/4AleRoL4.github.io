@@ -12,7 +12,7 @@ carousel: false
 series:
  - blog
 categories: [
-    笔记
+    教程
 ]
 tags: [
     MySQL
@@ -24,6 +24,8 @@ authors: yfdkldmm
 这次就是比较进阶的一部分
 
 <!--more-->
+
+有不少的内容其实更适合自己尝试，结果也不会有多少改变，就不给图了。
 
 ## 排序查询
 
@@ -37,6 +39,8 @@ order by b (asc|desc);
 ```
 
 代表从a表中查询所有，按照b列升序或降序排列。
+
+![排序格式](/images/MySQL命令（二）/排序格式.jpg)
 
 ### 特点
 

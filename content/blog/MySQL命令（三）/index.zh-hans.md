@@ -25,6 +25,8 @@ authors: yfdkldmm
 
 <!--more-->
 
+部分内容比较基础，而有些内容比较难说清，所以给图解释。
+
 ## 分组查询
 
 在使用了分组函数以后，想要依次为每个部分进行统计，就需要用到的查询方式
@@ -147,6 +149,8 @@ where a表.列3=b表,列4
 对于不同表的同一个名字的列，需要在前面加上表名.来指代。
 另外就是，如果为表名起了别名，则不可以使用原来的表名。
 
+![等值连接别名](/images/MySQL（命令三）/等值连接别名.jpg)
+
 ```mysql
 select a表.列1, b表.列2
 from b b表, a a表 
@@ -202,6 +206,8 @@ where a1.列3 = a1.列2;
 
 需要注意的是，自连接必须给两个不同的表分别起别名，也就相当于把同一个表，分离出两个，相同内容但是表名不同的表，此时按照等值或不等值连接那样查询即可。
 
+![自连接](/images/MySQL（命令三）/自连接.jpg)
+
 #### 99语法标准的写法
 
 ```mysql
@@ -237,10 +243,13 @@ on a.列2 = b.列3
 where b.列3 is null;
 ```
 
+![外连接](/images/MySQL（命令三）/外连接.jpg)
+
 均为一个功能：查询b表所有数据，条件为a列2中的值没有对应的b列3的值。
 其中，主表都为a表，从表是b表。
 所以，left左边是主表，right右边是主表。
-说法比较绕，可以看下面的图来理解。
+上图的结果，就是因为employees表中，一个员工的对应department_id为null，在对应的departments表没有对应数据，所以输出为null。
+说法比较绕，可以看底下的总结图来理解。
 
 ##### 全外连接
 
@@ -355,3 +364,220 @@ where a.列2 > all(
 ```
 
 格式也就如上，没有太大变化。
+
+#### where后面行子查询
+
+其实也就是将多个where列子查询合在一起。
+
+```mysql
+select a.列1
+from a
+where (a.列2, a.列3) =
+(
+    select min(a.列2), max(a.列3)
+    from a
+);
+```
+
+不过这个用得比较少。
+
+### select后面子查询
+
+有点像连接查询。这边直接就用数据库里的数据展示。
+
+```mysql
+# 查询每个部门的信息和员工个数
+SELECT d.*, 
+(
+SELECT COUNT(*)
+FROM employees e
+WHERE e.department_id = d.department_id
+) 个数
+FROM departments d;
+
+SELECT d.*, COUNT(last_name) 个数
+FROM employees e
+RIGHT JOIN departments d ON d.department_id = e.`department_id`
+GROUP BY d.`department_id`;
+```
+
+上面分别给了两种方式，第一种就是select子查询，在查询部门信息的时候，顺便嵌套一个查询员工个数。
+第二种就是分组查询，这里count不能直接查询*，因为会统计到null，从而个数有误。
+
+### from后面子查询
+
+用在from后面，其实就是通过子查询的结果，来形成另一张表。通常都是再配合多表查询使用。
+还是用一个案例来演示。
+
+```mysql
+CREATE TABLE job_grades
+(grade_level VARCHAR(3),
+ lowest_sal  int,
+ highest_sal int);
+
+INSERT INTO job_grades
+VALUES ('A', 1000, 2999);
+
+INSERT INTO job_grades
+VALUES ('B', 3000, 5999);
+
+INSERT INTO job_grades
+VALUES('C', 6000, 9999);
+
+INSERT INTO job_grades
+VALUES('D', 10000, 14999);
+
+INSERT INTO job_grades
+VALUES('E', 15000, 24999);
+
+INSERT INTO job_grades
+VALUES('F', 25000, 40000);
+```
+
+先运行这一段，添加一个job_grades的表。
+
+然后是案例：查询每个部门的平均工资等级。
+肯定是要先查询部门的平均工资，然后再和刚刚创建的表联表查询，条件就是工资等级的条件。
+
+```mysql
+SELECT j.`grade_level`, a.ag, a.department_id
+FROM job_grades j
+INNER JOIN 
+(
+SELECT AVG(salary) ag, department_id
+FROM employees
+GROUP BY department_id
+) a ON a.ag BETWEEN j.`lowest_sal` AND j.`highest_sal`
+```
+
+表的位置依旧是可交换的。其次，必须给子查询的表起别名，否则是找不到子查询出来的表。
+
+### exists后面子查询（相关子查询）
+
+首先是讲讲exists函数。
+
+exists函数只会返回两个值，1和0，也就是布尔值，用于判断，exists函数里面的select语句，是否有结果。
+用法如下。
+
+```mysql
+SELECT EXISTS
+(SELECT last_name
+FROM employees
+WHERE employee_id = 10);
+
+SELECT EXISTS
+(SELECT last_name
+FROM employees
+WHERE employee_id = 100);
+```
+
+以上两个select语句出来的结果，分别为0和1。
+因为表中数据没有employee_id=10的数据，所以exists的结果为0，反之，有employee_id=100的数据，所以为1。
+
+用案例来进一步说明。
+
+```mysql
+# 查询有员工的部门名
+
+SELECT department_name
+FROM departments d
+WHERE EXISTS (
+SELECT last_name
+FROM employees e
+WHERE e.`department_id` = d.`department_id`
+);
+
+SELECT department_name
+FROM departments d
+WHERE d.`department_id` IN (
+SELECT e.department_id
+FROM employees e
+);
+
+SELECT d.department_name
+FROM departments d
+INNER JOIN employees e ON e.`department_id` = d.`department_id`
+GROUP BY e.`department_id`;
+
+```
+
+上面用了三种方式。
+第一种是用exists函数。先查询出部门名，查询的同时逐一根据部门名的部门id去比对是否有员工信息，如果有，则输出。
+第二种是使用in来判断。
+第三种是直接使用内连接和分组。
+
+这三种方式在查询速度，可读性，可修改性都各有优劣。
+比如，将案例改为，查询没有员工的部门名。
+
+```mysql
+# 查询没有员工的部门名
+
+SELECT department_name
+FROM departments d
+WHERE NOT EXISTS (
+SELECT last_name
+FROM employees e
+WHERE e.`department_id` = d.`department_id`
+);
+
+SELECT department_name
+FROM departments d
+WHERE d.`department_id` NOT IN (
+SELECT e.department_id
+FROM employees e
+WHERE e.`department_id` IS NOT NULL
+);
+
+SELECT d.department_name
+FROM departments d
+LEFT JOIN employees e ON e.`department_id` = d.`department_id`
+WHERE e.`last_name` IS NULL
+GROUP BY d.`department_id`;
+```
+
+仅仅只是从查有，到没有，有的方法就有很大的改动。
+使用exists的办法，只需添加not。
+使用in的判断，则还需要在子查询中过滤null值，否则是不会有结果。
+而直接多表查询的办法，就必须从内连接转变为外连接，并添加外连接的判断条件。
+
+## 分页查询
+
+主要用于限制查询数量。
+语法如下。
+
+```mysql
+select *
+from employees
+limit 起始位置, 显示数量;
+```
+
+需要注意的是，起始位置是从0开始。当limit后面只有一个数字时，默认起始位置为0，显示数量为数字。
+limit语句应当在select语句的最后方，执行顺序也是最后。
+下图为sql语句的执行顺序。
+
+![执行顺序](/images/MySQL（命令三）/执行顺序.jpg)
+
+然后是开发中常用的格式。
+
+```mysql
+# 常用的格式
+limit (page-1)*size, size
+```
+
+## 联合查询
+
+主要用于需要查询多个表数据，但是两个表中没有可连接的键，就可以用union来合并查询结果
+
+```mysql
+select id, name from a
+union
+select b_id, b_name from b
+```
+
+需要注意的是，union两个查询结果的列是一一对应的。如上方为，id与b_id对应，数据显示为同一列，name和b_name也是为同一列。
+且，对应的列数不一致时，则会报错。
+union查询的结果默认去重，即两个表中有相同数据时，则只显示前一个表的数据，后续的表都因为去重而不显示。可使用union all来取消去重。
+
+## 小结
+
+一大长串的查询语句总算结束了。
