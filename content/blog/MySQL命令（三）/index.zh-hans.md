@@ -3,7 +3,7 @@
 title: MySQL命令（三）
 date: 2023-05-12T18:39:12+08:00
 featured: false
-draft: true
+draft: false
 comment: true
 toc: true
 reward: true
@@ -18,7 +18,7 @@ tags: [
     MySQL
 ]
 images: []
-authors: yfdkldmm
+authors: Shazixnar
 ---
 
 涵盖了其他的一些东西

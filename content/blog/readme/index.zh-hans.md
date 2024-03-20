@@ -10,11 +10,11 @@ series:
 tags:
   - README
 carousel: true
-authors: yfdkldmm
+authors: Shazixnar
 images: [/images/index.png]
 ---
 
-这里是由（要饭的）可怜大猫猫自己搭建的网站，用于分享本人（或者以后也有别的人）发布的包括但不限于：
+这里是由Shazixnar自己搭建的网站，用于分享本人（或者以后也有别的人）发布的包括但不限于：
 blog，小说，midi，小知识等东西。
 
 <!--more-->

@@ -18,7 +18,7 @@ tags: [
     MySQL
 ]
 images: []
-authors: yfdkldmm
+authors: Shazixnar
 ---
 
 使用的MySQL版本是5.5，之前有安装过8.0（然后密码给忘了），下面就是，如何将MySQL8.0卸载，并且再重新装上5.5的过程

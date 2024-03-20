@@ -16,7 +16,7 @@ categories: [
 ]
 tags: 
   - Hugo
-authors: yfdkldmm
+authors: Shazixnar
 images: [/images/开始让网站变成自己想要的样子吧/index.png]
 ---
 

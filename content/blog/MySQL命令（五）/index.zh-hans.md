@@ -18,7 +18,7 @@ tags: [
     MySQL
 ]
 images: []
-authors: yfdkldmm
+authors: Shazixnar
 ---
 
 这一部分是DDL语言。也就是对库和表的管理。

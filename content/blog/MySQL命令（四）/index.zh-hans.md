@@ -18,7 +18,7 @@ tags: [
     MySQL
 ]
 images: []
-authors: yfdkldmm
+authors: Shazixnar
 ---
 
 前面学完了查询的命令，下面就该是增删改了。

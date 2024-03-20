@@ -18,7 +18,7 @@ tags: [
     MySQL
 ]
 images: []
-authors: yfdkldmm
+authors: Shazixnar
 ---
 
 主要是在学习MySQL命令以前，还需要多了解的一些东西

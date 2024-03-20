@@ -1,7 +1,7 @@
 baseURL: /
-title: （要饭的）可怜大猫猫's blog
+title: Shazixnar's blog
 theme: github.com/razonyang/hugo-theme-bootstrap
-copyright: 'Copyright © 2023-{year} (要饭的)可怜大猫猫. All Rights Reserved.'
+copyright: 'Copyright © 2023-{year} Shazixnar. All Rights Reserved.'
 defaultContentLanguage: zh-hans
 hasCJKLanguage: true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 # defaultContentLanguageInSubdir: true

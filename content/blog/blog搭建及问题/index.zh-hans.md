@@ -17,7 +17,7 @@ categories: [
 tags: [
     Hugo
 ]
-authors: yfdkldmm
+authors: Shazixnar
 images: [/images/blog搭建及问题/index.jpg]
 ---
 
