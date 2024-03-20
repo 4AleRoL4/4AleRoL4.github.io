@@ -33,5 +33,5 @@ permalinks:
   news: /news/:year/:month/:title/
   blog: /blog/:year/:month/:title/
 
-# module:
-  # proxy: https://goproxy.cn
+module:
+  proxy: https://goproxy.cn

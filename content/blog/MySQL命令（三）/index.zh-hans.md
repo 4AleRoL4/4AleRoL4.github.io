@@ -12,7 +12,7 @@ carousel: false
 series:
  - blog
 categories: [
-    笔记
+    教程
 ]
 tags: [
     MySQL
